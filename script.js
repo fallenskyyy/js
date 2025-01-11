@@ -4,70 +4,70 @@ function getRandomInt(max) {
 
 function getComputerChoice(){
     let choice = getRandomInt(3);
-    let result
+    let result;
     switch(choice){
         case 0:
-            result = "Rock"
-            break
+            result = "Rock";
+            break;
         case 1:
-            result = "Scissors"
-            break
+            result = "Scissors";
+            break;
         case 2:
-            result = "Paper"
-            break
+            result = "Paper";
+            break;
     }
-    return result
+    return result;
 }
 
 function getHumanChoice(){
     while (true) {
         let choice = prompt("Choose ");
         if(choice === "Rock" || choice === "Scissors" || choice === "Paper"){
-            return choice
+            return choice;
         }
         else{
             console.log("You entered wrong choice");
-            getHumanChoice()
+            getHumanChoice();
         }  
     }
 }
 
 function playGame(){
-    let HumanScore = 0
-    let ComputerScore = 0
+    let HumanScore = 0;
+    let ComputerScore = 0;
     function playRound(humanChoice, computerChoice){
         if(humanChoice === "Rock" && computerChoice === "Rock"){
-            console.log("Tie")
+            console.log("Tie");
         }
         else if(humanChoice === "Rock" && computerChoice === "Scissors"){
-            console.log("Human won")
-            HumanScore += 1
+            console.log("Human won");
+            HumanScore += 1;
         }
         else if(humanChoice === "Rock" && computerChoice === "Paper"){
-            console.log("Computer won")
-            ComputerScore += 1
+            console.log("Computer won");
+            ComputerScore += 1;
         }
         else if(humanChoice === "Scissors" && computerChoice === "Rock"){
-            console.log("Computer won")
-            ComputerScore += 1
+            console.log("Computer won");
+            ComputerScore += 1;
         }
         else if(humanChoice === "Scissors" && computerChoice === "Scissors"){
-            console.log("Tie")
+            console.log("Tie");
         }
         else if(humanChoice === "Scissors" && computerChoice === "Paper"){
-            console.log("Human won")
-            HumanScoreScore += 1
+            console.log("Human won");
+            HumanScoreScore += 1;
         }
         else if(humanChoice === "Paper" && computerChoice === "Rock"){
-            console.log("Human won")
-            HumanScore += 1
+            console.log("Human won");
+            HumanScore += 1;
         }
         else if(humanChoice === "Paper" && computerChoice === "Scissors"){
-            console.log("Computer won")
-            ComputerScore += 1
+            console.log("Computer won");
+            ComputerScore += 1;
         }
         else if(humanChoice === "Paper" && computerChoice === "Paper"){
-            console.log("Tie")
+            console.log("Tie");
         }
     }
     for (let i = 0; i <= 4; i++) {
@@ -78,14 +78,14 @@ function playGame(){
         console.log("Human score - ", HumanScore, "Computer score - ", ComputerScore);
     }
     if (HumanScore > ComputerScore) {
-        console.log("Total win - Human")
+        console.log("Total win - Human");
     }
     else if (HumanScore === ComputerScore){
-        console.log("Tie")
+        console.log("Tie");
     }
     else{
-        console.log("Total win - Computer")
+        console.log("Total win - Computer");
     }
 }
 
-playGame()
+playGame();
